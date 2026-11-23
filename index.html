@@ -370,6 +370,11 @@ dd a:hover { border-bottom-color: var(--blue); }
 
 .map { margin-top: 24px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); }
 .map iframe { display: block; width: 100%; height: 260px; border: 0; }
+.shop-grid { display: grid; gap: 20px; grid-template-columns: 1fr 1fr; }
+@media(max-width: 640px) { .shop-grid { grid-template-columns: 1fr; } }
+.shop-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 28px; box-shadow: var(--shadow); }
+.shop-card h3 { font-size: 1.4rem; font-weight: 800; color: var(--navy); }
+.shop-card p { color: var(--muted); font-size: 0.95rem; margin: 6px 0 18px; }
 .social { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
 .social a { padding: 8px 16px; border-radius: 99px; border: 1px solid var(--line); background: #fff; color: var(--navy); font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: all 0.15s; }
 .social a:hover { border-color: var(--blue); color: var(--blue); }
@@ -403,6 +408,8 @@ footer strong { color: #ffffff; }
   <button class="burger" id="burger" aria-expanded="false" aria-controls="ml">Menu</button>
   <nav id="nav"><ul id="ml">
     <li><a href="#deals">Black Friday</a></li>
+    <li><a href="iphones.html#pre-owned">Pre-Owned</a></li>
+    <li><a href="iphones.html#brand-new">Brand New</a></li>
     <li><a href="#repairs">Repairs</a></li>
     <li><a href="#why">Why Geetech</a></li>
     <li><a href="#delivery">Delivery</a></li>
@@ -452,6 +459,22 @@ footer strong { color: #ffffff; }
       <a class="btn primary" style="width:100%" href="#deals">Claim Your Deal Now</a>
     </div>
   </div></div>
+
+  <!-- SHOP BY CONDITION -->
+  <section id="shop" style="padding:44px 0"><div class="wrap">
+    <div class="shop-grid">
+      <div class="shop-card">
+        <h3>Pre-Owned iPhones</h3>
+        <p>Quality-tested iPhones at great prices, with Yoco payment links.</p>
+        <a class="btn primary" href="iphones.html#pre-owned">Shop Pre-Owned →</a>
+      </div>
+      <div class="shop-card">
+        <h3>Brand New iPhones</h3>
+        <p>Factory sealed iPhones with free AirPods.</p>
+        <a class="btn dark" href="iphones.html#brand-new">Shop Brand New →</a>
+      </div>
+    </div>
+  </div></section>
 
   <!-- BLACK FRIDAY DEALS -->
   <section id="deals"><div class="wrap">
