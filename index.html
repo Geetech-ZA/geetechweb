@@ -638,6 +638,19 @@ footer strong { color: #ffffff; }
 </footer>
 
 <script>
+  const GAME_URL = "https://mastuluappletech.github.io/geetechdrive/"; 
+const APK_URL = "https://github.com/MastuluAppleTech/geetechdrive/releases/download/v1.0/geetech-drive.apk";  
+
+document.querySelectorAll('.play-link').forEach((link) => {
+  link.setAttribute('href', GAME_URL);
+  link.setAttribute('target', '_blank');
+  link.setAttribute('rel', 'noopener');
+});
+
+document.querySelectorAll('.apk-link').forEach((link) => {
+  link.setAttribute('href', APK_URL);
+  link.setAttribute('download', 'geetech-drive.apk');
+});
 // Replace with your real WhatsApp number in international format (e.g. 27712345678)
 const WA_NUMBER = "27764533222";
 
