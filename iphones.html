@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pre-Owned &amp; Brand New iPhones – Geetech Electronic Store, Randfontein</title>
+<meta name="description" content="Shop pre-owned and brand new iPhones at Geetech Electronic Store, Homelake, Randfontein. Order via WhatsApp or pay online with Yoco.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pre-Owned &amp; Brand New iPhones – Geetech Electronic Store">
+<meta property="og:locale" content="en_ZA">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f4f7fb;
+  --navy: #0a192f;
+  --blue: #1d4ed8;
+  --blue-hover: #1e40af;
+  --blue-soft: #eff6ff;
+  --accent-red: #dc2626;
+  --text: #0f172a;
+  --muted: #475569;
+  --line: #e2e8f0;
+  --shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  color-scheme: light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+section { padding: 72px 0; }
+section.alt { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-soft);
+  padding: 5px 12px;
+  border-radius: 99px;
+  margin-bottom: 12px;
+}
+
+h2 { font-size: clamp(1.75rem, 4vw, 2.35rem); line-height: 1.15; margin-bottom: 10px; font-weight: 800; color: var(--navy); letter-spacing: -0.02em; }
+.sub { color: var(--muted); max-width: 60ch; margin-bottom: 34px; font-size: 1.02rem; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 10px;
+  font: 600 0.96rem 'Inter', sans-serif;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn.primary { background: var(--blue); color: #ffffff; box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25); }
+.btn.primary:hover { background: var(--blue-hover); }
+.btn.dark { background: var(--navy); color: #ffffff; }
+.btn.dark:hover { background: #1e293b; }
+.btn.outline { background: #ffffff; border-color: var(--line); color: var(--navy); }
+.btn.outline:hover { border-color: var(--blue); color: var(--blue); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Top Promo Bar */
+.promo-strip {
+  background: var(--navy);
+  color: #ffffff;
+  text-align: center;
+  padding: 9px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.promo-strip strong { color: #60a5fa; font-weight: 700; }
+.promo-strip a { color: #ffffff; text-decoration: underline; margin-left: 6px; font-weight: 600; }
+
+/* Navigation */
+header.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.logo { display: flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 800; font-size: 1.3rem; line-height: 1.05; color: var(--navy); }
+.logo img { height: 44px; width: auto; border-radius: 8px; }
+.logo small { display: block; color: var(--blue); font-weight: 600; font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase; }
+
+nav ul { display: flex; gap: 4px; list-style: none; padding: 0; align-items: center; }
+nav a, .dd > button {
+  display: block;
+  padding: 9px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font: 500 0.92rem 'Inter', sans-serif;
+  color: var(--text);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+nav a:hover, .dd > button:hover { background: var(--bg-alt); color: var(--blue); }
+nav a.cta { background: var(--blue); color: #ffffff; font-weight: 600; margin-left: 6px; }
+nav a.cta:hover { background: var(--blue-hover); color: #ffffff; }
+
+.dd { position: relative; }
+.dd > button::after { content: " ▾"; font-size: 0.8rem; }
+.menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: 280px;
+  padding: 8px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.dd.open .menu { display: block; }
+.menu a { padding: 10px 12px; border-radius: 8px; }
+.menu strong { display: block; color: var(--navy); font-size: 0.92rem; }
+.menu span { font-size: 0.8rem; color: var(--muted); }
+
+.burger {
+  display: none;
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  color: var(--navy);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font: 600 0.9rem 'Inter', sans-serif;
+  cursor: pointer;
+}
+@media(max-width: 860px) {
+  .burger { display: block; }
+  nav ul {
+    display: none;
+    position: absolute;
+    left: 0; right: 0; top: 72px;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px 20px 22px;
+    background: #ffffff;
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow);
+  }
+  nav.open ul { display: flex; }
+  nav a.cta { margin-left: 0; margin-top: 6px; text-align: center; }
+  .menu { position: static; width: 100%; margin-top: 4px; box-shadow: none; }
+}
+
+/* Hero Section */
+.hero {
+  padding: 64px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+  border-bottom: 1px solid var(--line);
+}
+.hero .wrap { display: grid; gap: 44px; grid-template-columns: 1.15fr 0.85fr; align-items: center; }
+.hero h1 { font-size: clamp(2.3rem, 5.5vw, 3.75rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.03em; color: var(--navy); }
+.hero h1 span { color: var(--blue); display: block; }
+.hero p { margin: 18px 0 28px; color: var(--muted); font-size: 1.08rem; max-width: 46ch; }
+
+.hero-card {
+  background: var(--navy);
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 20px 35px -10px rgba(10, 25, 47, 0.25);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.hero-card::before {
+  content: "";
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 180px; height: 180px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.35), transparent 70%);
+  pointer-events: none;
+}
+.bf-pill {
+  display: inline-block;
+  background: var(--accent-red);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+.hero-card h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 6px; }
+.hero-card .card-sub { color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px; }
+.mini-list { display: grid; gap: 10px; margin-bottom: 22px; }
+.mini-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.06);
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.mini-item strong { font-size: 0.98rem; }
+.mini-item span { font-size: 0.8rem; color: #94a3b8; display: block; }
+.mini-item b { font-size: 1.15rem; color: #60a5fa; font-weight: 800; }
+@media(max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; } }
+
+/* Black Friday Deal Cards */
+.board { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.deal {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+  position: relative;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.deal:hover { transform: translateY(-4px); border-color: var(--blue); }
+.deal.featured { border: 2px solid var(--blue); }
+.deal-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: var(--navy);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.deal.featured .deal-badge { background: var(--blue); }
+.deal h3 { font-size: 1.45rem; color: var(--navy); font-weight: 800; margin-top: 4px; }
+.deal .spec { color: var(--blue); font-weight: 600; font-size: 0.9rem; margin-bottom: 12px; }
+.deal p { color: var(--muted); font-size: 0.92rem; margin-bottom: 18px; }
+.deal ul { list-style: none; padding: 0; margin-bottom: 22px; display: grid; gap: 6px; font-size: 0.88rem; color: var(--muted); }
+.deal li::before { content: "✓ "; color: var(--blue); font-weight: 800; }
+.price-box { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); }
+.price-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 600; }
+.deal .pr { font-size: 2.15rem; font-weight: 800; color: var(--navy); line-height: 1.1; }
+.deal .btn { margin-top: 16px; width: 100%; }
+
+/* Bundle Banner */
+.bundle {
+  margin-top: 32px;
+  border: 1px solid #bfdbfe;
+  border-radius: 16px;
+  padding: 26px 30px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  background: var(--blue-soft);
+}
+.bundle-tag {
+  background: var(--blue);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.15rem;
+  padding: 14px 20px;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 1.2;
+}
+.bundle h4 { font-size: 1.15rem; color: var(--navy); font-weight: 700; }
+.bundle ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 8px; color: var(--muted); font-size: 0.92rem; }
+.bundle li::before { content: "✓ "; color: var(--blue); font-weight: 800; }
+@media(max-width: 640px) { .bundle { grid-template-columns: 1fr; } }
+
+/* Cards (Why Geetech & Repairs) */
+.grid-cards { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+.card h3 { font-size: 1.08rem; margin-bottom: 6px; color: var(--navy); font-weight: 700; }
+.card p { color: var(--muted); font-size: 0.92rem; }
+.rep .card { border-top: 3px solid var(--blue); }
+.price { display: block; margin-top: 12px; color: var(--blue); font-weight: 800; font-size: 1.05rem; }
+
+/* Geetech Drive Callout */
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--blue);
+  border-radius: 16px;
+  padding: 28px 32px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+.game h2 { font-size: 1.45rem; margin: 0 0 6px; }
+.game p { color: var(--muted); max-width: 48ch; margin: 0; }
+
+/* Forms & Contact */
+.contact { display: grid; gap: 44px; grid-template-columns: 1fr 1fr; }
+@media(max-width: 820px) { .contact { grid-template-columns: 1fr; } }
+form {
+  display: grid;
+  gap: 16px;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+label { font-weight: 600; font-size: 0.88rem; color: var(--navy); }
+input, select, textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: var(--text);
+  font: inherit;
+  transition: border-color 0.15s;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--blue); outline: none; }
+.two { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
+@media(max-width: 520px) { .two { grid-template-columns: 1fr; } }
+
+dl { display: grid; gap: 18px; margin-top: 24px; }
+dt { color: var(--muted); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; }
+dd { margin: 2px 0 0; font-weight: 700; font-size: 1.05rem; color: var(--navy); }
+dd a { text-decoration: none; color: var(--blue); border-bottom: 2px solid #bfdbfe; }
+dd a:hover { border-bottom-color: var(--blue); }
+
+.map { margin-top: 24px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); }
+.map iframe { display: block; width: 100%; height: 260px; border: 0; }
+.social { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.social a { padding: 8px 16px; border-radius: 99px; border: 1px solid var(--line); background: #fff; color: var(--navy); font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: all 0.15s; }
+.social a:hover { border-color: var(--blue); color: var(--blue); }
+footer .social { justify-content: center; margin-top: 14px; }
+footer .social a { background: transparent; border-color: rgba(255,255,255,0.2); color: #fff; }
+footer .social a:hover { border-color: #60a5fa; color: #60a5fa; }
+.wa-float { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 60; background: #16a34a; color: #fff; padding: 13px 20px; border-radius: 99px; font-weight: 700; font-size: 0.92rem; text-decoration: none; box-shadow: 0 8px 20px rgba(0,0,0,0.25); }
+.wa-float:hover { background: #15803d; }
+footer {
+  background: var(--navy);
+  color: #94a3b8;
+  text-align: center;
+  padding: 36px 20px;
+  font-size: 0.9rem;
+}
+footer strong { color: #ffffff; }
+@media(prefers-reduced-motion: reduce) { .btn, .deal { transition: none; } html { scroll-behavior: auto; } }
+
+.page-head { padding: 48px 0 28px; background: linear-gradient(135deg,#f8fafc 0%,#eff6ff 100%); border-bottom: 1px solid var(--line); }
+.page-head h1 { font-size: clamp(2rem,5vw,3rem); font-weight: 800; letter-spacing: -0.03em; color: var(--navy); line-height: 1.1; }
+.page-head p { color: var(--muted); margin: 10px 0 20px; max-width: 56ch; }
+.tabs { display: inline-flex; gap: 6px; padding: 5px; background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); }
+.tab { padding: 11px 24px; border: 0; border-radius: 8px; background: none; font: 600 0.95rem 'Inter', sans-serif; color: var(--text); cursor: pointer; }
+.tab[aria-selected="true"] { background: var(--blue); color: #fff; }
+.back { display: inline-block; margin-bottom: 16px; font-weight: 600; font-size: 0.9rem; color: var(--blue); text-decoration: none; }
+.back:hover { text-decoration: underline; }
+.shot { margin: -28px -28px 18px; padding: 22px 0 14px; border-radius: 16px 16px 0 0; background: radial-gradient(circle at 50% 35%, #ffffff 0%, var(--blue-soft) 70%); border-bottom: 1px solid var(--line); text-align: center; }
+.shot svg, .shot img { height: 190px; width: auto; max-width: 100%; filter: drop-shadow(0 12px 14px rgba(15,23,42,0.22)); }
+.deal .pr.ask { font-size: 1.35rem; padding: 6px 0; }
+.note { font-size: 0.8rem; color: var(--muted); margin: -22px 0 26px; }
+.empty { text-align: center; padding: 40px 28px; }
+.empty h3 { font-size: 1.3rem; }
+.empty .actions { justify-content: center; margin-top: 18px; }
+</style>
+</head>
+<body>
+<div class="promo-strip">
+  <strong>BLACK FRIDAY SALE LIVE:</strong> Pre-owned and brand new iPhones in Randfontein. <a href="index.html#deals">Black Friday Specials →</a>
+</div>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="index.html">
+    <img src="logo.png" alt="Geetech logo">
+    <span>Geetech<small>Electronic Store</small></span>
+  </a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="ml">Menu</button>
+  <nav id="nav"><ul id="ml">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#pre-owned" data-view="pre-owned">Pre-Owned</a></li>
+    <li><a href="#brand-new" data-view="brand-new">Brand New</a></li>
+    <li><a href="index.html#repairs">Repairs</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a class="cta" href="https://wa.me/27764533222?text=Hi%20Geetech%2C%20I%27d%20like%20to%20enquire%20about%20an%20iPhone" target="_blank" rel="noopener">WhatsApp Us</a></li>
+  </ul></nav>
+</div></header>
+
+<main>
+  <div class="page-head"><div class="wrap">
+    <a class="back" href="index.html">← Back to Home</a>
+    <h1>Shop iPhones</h1>
+    <p>Quality-tested pre-owned iPhones and brand new sealed units. Collect in Randfontein or have it delivered via PostNet, Paxi (PEP) or The Courier Guy.</p>
+    <div class="tabs" role="tablist" aria-label="iPhone condition">
+      <button class="tab" role="tab" id="tab-pre-owned" data-view="pre-owned" aria-selected="true">Pre-Owned</button>
+      <button class="tab" role="tab" id="tab-brand-new" data-view="brand-new" aria-selected="false">Brand New</button>
+    </div>
+  </div></div>
+
+  <section style="padding:48px 0"><div class="wrap">
+    <div id="view-pre-owned" role="tabpanel" aria-labelledby="tab-pre-owned">
+      <span class="eyebrow">Pre-Owned</span>
+      <h2>Pre-Owned iPhones</h2>
+      <p class="sub">Every pre-owned iPhone goes through our full hardware check before it is sold.</p>
+      <p class="note">Pictures are illustrations. Colour and condition of the actual phone may vary.</p>
+      <div class="board" id="list-pre-owned"></div>
+    </div>
+    <div id="view-brand-new" role="tabpanel" aria-labelledby="tab-brand-new" hidden>
+      <span class="eyebrow">Brand New</span>
+      <h2>Brand New Sealed iPhones</h2>
+      <p class="sub">Factory sealed iPhones in the current range. Buy any brand new sealed iPhone and get free AirPods.</p>
+      <p class="note">Pictures are illustrations. Ask us for available colours, storage sizes and today&#39;s price.</p>
+      <div class="board" id="list-brand-new"></div>
+      <div class="bundle">
+        <div class="bundle-tag">SEALED BOX<br>BONUS</div>
+        <div>
+          <h4>Free AirPods with every sealed iPhone</h4>
+          <ul><li>Brand-new factory sealed boxes</li><li>Free AirPods included</li><li>Collect in Homelake, Randfontein</li></ul>
+        </div>
+      </div>
+    </div>
+  </div></section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Geetech Electronic Store</strong> • 2 Constance Avenue, Homelake, Randfontein, 1759 • © 2026 All Rights Reserved.
+    <div class="social"><a href="https://www.tiktok.com/@geetechza" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/aspectkenny/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/MastuluAppleTech/" target="_blank" rel="noopener">Facebook</a></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/27764533222?text=Hi%20Geetech%2C%20I%27d%20like%20to%20enquire%20about%20an%20iPhone" target="_blank" rel="noopener" aria-label="Chat with Geetech on WhatsApp">💬 WhatsApp Us</a>
+
+<script>
+const WA_NUMBER = "27764533222";
+
+// ADD OR EDIT PHONES HERE. cond is "pre-owned" or "brand-new".
+// shape: pro | bar2 | bar1 | single | pill | diag   (draws the phone picture)
+// To use a real photo instead, add  img: "photos/iphone-13.jpg"  to a phone.
+// Leave out "price" and the card shows "Ask for price".
+const PRO = ["Factory sealed box", "Free AirPods included"];
+const PRODUCTS = [
+  { cond: "pre-owned", model: "iPhone XR", spec: "64GB • Factory Unlocked", badge: "Entry Deal", shape: "single", c: ["#ee8b78", "#c95b47"],
+    desc: "Smooth Face ID performance, Liquid Retina display, and all-day battery reliability at an unbeatable entry price.",
+    points: ["Full 30-point Geetech hardware check", "All networks supported (SA & Global)", "Charging cable included"],
+    price: "R3,600", label: "Black Friday Price", pay: "https://pay.yoco.com/r/jvBeAA" },
+  { cond: "pre-owned", model: "iPhone 11", spec: "64GB • Dual-Camera System", badge: "Value Pick", shape: "diag", c: ["#cdbbe8", "#9f86c9"],
+    desc: "Ultra-wide night mode photography, fast A13 Bionic chip, and strong battery life for everyday power users.",
+    points: ["Full 30-point Geetech hardware check", "True Tone & Face ID verified", "Charging cable included"],
+    price: "R4,800", label: "Black Friday Price", pay: "https://pay.yoco.com/r/OkMGjL" },
+  { cond: "pre-owned", model: "iPhone 13", spec: "128GB • Super Retina XDR", badge: "Top Deal", featured: true, shape: "diag", c: ["#5f84b0", "#365a85"],
+    desc: "Cinematic camera mode, A15 Bionic speed, and double the storage with 128GB standard.",
+    points: ["Full 30-point Geetech hardware check", "128GB high-speed storage", "Charging cable included"],
+    price: "R7,000", label: "Black Friday Price", pay: "https://pay.yoco.com/r/qNKwjY" },
+
+  { cond: "brand-new", model: "iPhone 17 Pro Max", spec: "6.9\" display • A19 Pro", badge: "Flagship", featured: true, shape: "pro", c: ["#e8803a", "#b94a1c"],
+    desc: "The biggest screen and longest battery life in the iPhone range, with a pro triple-camera system.", points: PRO },
+  { cond: "brand-new", model: "iPhone 17 Pro", spec: "6.3\" display • A19 Pro", badge: "Pro", shape: "pro", c: ["#34487a", "#1d2a4c"],
+    desc: "Pro performance and a pro camera system in a more compact size.", points: PRO },
+  { cond: "brand-new", model: "iPhone Air", spec: "6.5\" ProMotion • A19 Pro", badge: "Ultra Thin", shape: "bar1", c: ["#d6e6f3", "#a8c2d8"],
+    desc: "The thinnest iPhone ever, light in the hand with all-day battery life.", points: PRO },
+  { cond: "brand-new", model: "iPhone 17", spec: "6.3\" ProMotion • A19", badge: "Popular", shape: "bar2", c: ["#bcaadb", "#8c78b6"],
+    desc: "Bright ProMotion display, fast A19 chip and the Center Stage front camera.", points: PRO },
+  { cond: "brand-new", model: "iPhone 17e", spec: "6.1\" display • A19", badge: "Best Value", shape: "single", c: ["#f4cdd5", "#e2a3b3"],
+    desc: "The most affordable iPhone 17 family model, starting at 256GB of storage.", points: PRO },
+  { cond: "brand-new", model: "iPhone 16 Plus", spec: "6.7\" display • A18", badge: "Big Screen", shape: "pill", c: ["#7088ea", "#4a5fc6"],
+    desc: "A large display and big battery for streaming, gaming and photos.", points: PRO },
+  { cond: "brand-new", model: "iPhone 16", spec: "6.1\" display • A18", badge: "Everyday", shape: "pill", c: ["#86cbc3", "#53a59c"],
+    desc: "Capable A18 performance, Camera Control and an Action button.", points: PRO },
+  { cond: "brand-new", model: "iPhone 16e", spec: "6.1\" display • A18", badge: "Entry", shape: "single", c: ["#3d3d40", "#1c1c1e"],
+    desc: "A18 power and Face ID at a lower price in a clean, simple design.", points: PRO },
+  { cond: "brand-new", model: "iPhone 15", spec: "6.1\" display • A16 Bionic", badge: "Budget Pick", shape: "diag", c: ["#f3d8d8", "#d9abab"],
+    desc: "Dynamic Island, USB-C and a 48MP main camera at a friendlier price.", points: PRO }
+];
+
+function lens(x, y, r) {
+  return `<circle cx="${x}" cy="${y}" r="${r}" fill="#15171a" stroke="#8a8f98" stroke-width="2"/><circle cx="${x}" cy="${y}" r="${r * 0.45}" fill="#2c3a55"/>`;
+}
+function phoneSVG(shape, c) {
+  const id = "g" + Math.random().toString(36).slice(2, 8);
+  const plate = (x, y, w, h, rx) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="rgba(255,255,255,0.28)"/>`;
+  let cam = "";
+  if (shape === "pro") cam = plate(46, 26, 76, 76, 18) + lens(70, 50, 13) + lens(70, 80, 13) + lens(100, 65, 13) + `<circle cx="104" cy="38" r="4" fill="#f5e9a8"/>`;
+  else if (shape === "bar2") cam = plate(44, 30, 112, 46, 22) + lens(70, 53, 14) + lens(106, 53, 14) + `<circle cx="136" cy="53" r="4" fill="#f5e9a8"/>`;
+  else if (shape === "bar1") cam = plate(44, 30, 112, 40, 20) + lens(72, 50, 14) + `<circle cx="112" cy="50" r="4" fill="#f5e9a8"/>`;
+  else if (shape === "pill") cam = plate(44, 28, 44, 76, 22) + lens(66, 52, 13) + lens(66, 82, 13);
+  else if (shape === "diag") cam = plate(44, 28, 68, 68, 18) + lens(63, 47, 13) + lens(93, 77, 13) + `<circle cx="95" cy="46" r="4" fill="#f5e9a8"/>`;
+  else cam = plate(44, 30, 38, 44, 14) + lens(63, 52, 13);
+  return `<svg viewBox="0 0 200 360" role="img" aria-label="iPhone illustration"><defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c[0]}"/><stop offset="1" stop-color="${c[1]}"/></linearGradient></defs><rect x="30" y="8" width="140" height="344" rx="30" fill="#2a2c30"/><rect x="33" y="11" width="134" height="338" rx="27" fill="url(#${id})"/>${cam}<circle cx="100" cy="240" r="16" fill="rgba(255,255,255,0.32)"/></svg>`;
+}
+
+function waLink(text) { return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`; }
+
+function card(p) {
+  const isNew = p.cond === "brand-new";
+  const hasPrice = !!p.price;
+  const cond = isNew ? "brand new sealed" : "pre-owned";
+  const msg = hasPrice
+    ? `Hi Geetech! I'd like the ${cond} ${p.model} (${p.spec.split(" • ")[0]}) at ${p.price}. Is it still available?`
+    : `Hi Geetech! I'm interested in the ${cond} ${p.model}. What storage sizes and colours do you have, and what is the price?`;
+  const pts = p.points.map(x => `<li>${x}</li>`).join("");
+  const pay = p.pay ? `<a class="btn outline" style="margin-top:10px" href="${p.pay}" target="_blank" rel="noopener">Pay Now via Yoco</a>` : "";
+  const pic = p.img ? `<img src="${p.img}" alt="${p.model}" loading="lazy">` : phoneSVG(p.shape, p.c);
+  return `<div class="deal${p.featured ? " featured" : ""}">
+    <div class="shot">${pic}</div>
+    <span class="deal-badge">${p.badge}</span>
+    <h3>${p.model}</h3><div class="spec">${p.spec}</div>
+    <p>${p.desc}</p><ul>${pts}</ul>
+    <div class="price-box"><div class="price-label">${hasPrice ? (p.label || "Price") : "Price"}</div><div class="pr${hasPrice ? "" : " ask"}">${hasPrice ? p.price : "Ask for price"}</div>
+    <a class="btn ${p.featured ? "primary" : "dark"}" href="${waLink(msg)}" target="_blank" rel="noopener">${hasPrice ? "Order via WhatsApp" : "Get Price on WhatsApp"}</a>${pay}</div>
+  </div>`;
+}
+
+function empty(cond) {
+  const text = cond === "brand-new" ? "Hi Geetech! Which brand new sealed iPhones do you have in stock, and at what prices?" : "Hi Geetech! Which pre-owned iPhones do you have in stock?";
+  return `<div class="card empty" style="grid-column:1/-1"><h3>Message us for current stock</h3>
+    <p>Our ${cond === "brand-new" ? "brand new" : "pre-owned"} stock changes often. Ask on WhatsApp for models, storage sizes and prices available today.</p>
+    <div class="actions"><a class="btn primary" href="${waLink(text)}" target="_blank" rel="noopener">Ask on WhatsApp</a></div></div>`;
+}
+
+["pre-owned", "brand-new"].forEach(c => {
+  const items = PRODUCTS.filter(p => p.cond === c);
+  document.getElementById("list-" + c).innerHTML = items.length ? items.map(card).join("") : empty(c);
+});
+
+// Tabs follow the URL hash (#pre-owned / #brand-new) so other pages can link straight to one
+function showView() {
+  const v = location.hash === "#brand-new" ? "brand-new" : "pre-owned";
+  ["pre-owned", "brand-new"].forEach(c => {
+    document.getElementById("view-" + c).hidden = c !== v;
+    document.getElementById("tab-" + c).setAttribute("aria-selected", c === v);
+  });
+}
+document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => { location.hash = t.dataset.view; }));
+window.addEventListener("hashchange", showView);
+showView();
+
+const burger = document.getElementById("burger"), nav = document.getElementById("nav");
+burger.addEventListener("click", () => { burger.setAttribute("aria-expanded", nav.classList.toggle("open")); });
+document.querySelectorAll("#ml a").forEach(a => a.addEventListener("click", () => { nav.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); }));
+</script>
+</body>
+</html>
