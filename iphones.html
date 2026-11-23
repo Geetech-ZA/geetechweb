@@ -393,7 +393,8 @@ footer strong { color: #ffffff; }
 .back { display: inline-block; margin-bottom: 16px; font-weight: 600; font-size: 0.9rem; color: var(--blue); text-decoration: none; }
 .back:hover { text-decoration: underline; }
 .shot { margin: -28px -28px 18px; padding: 22px 0 14px; border-radius: 16px 16px 0 0; background: radial-gradient(circle at 50% 35%, #ffffff 0%, var(--blue-soft) 70%); border-bottom: 1px solid var(--line); text-align: center; }
-.shot svg, .shot img { height: 190px; width: auto; max-width: 100%; filter: drop-shadow(0 12px 14px rgba(15,23,42,0.22)); }
+.shot svg { height: 190px; width: auto; max-width: 100%; filter: drop-shadow(0 12px 14px rgba(15,23,42,0.22)); }
+.shot img { display: block; margin: 0 auto; height: 220px; width: 100%; object-fit: contain; mix-blend-mode: multiply; }
 .deal .pr.ask { font-size: 1.35rem; padding: 6px 0; }
 .note { font-size: 0.8rem; color: var(--muted); margin: -22px 0 26px; }
 .empty { text-align: center; padding: 40px 28px; }
@@ -475,18 +476,18 @@ const WA_NUMBER = "27764533222";
 // Leave out "price" and the card shows "Ask for price".
 const PRO = ["Factory sealed box", "Free AirPods included"];
 const PRODUCTS = [
-  { cond: "pre-owned", model: "iPhone XR", spec: "64GB • Factory Unlocked", badge: "Entry Deal", shape: "single", c: ["#ee8b78", "#c95b47"],
+  { cond: "pre-owned", model: "iPhone XR", spec: "64GB • Factory Unlocked", badge: "Entry Deal", img: "iphone%20xr.jpg", shape: "single", c: ["#ee8b78", "#c95b47"],
     desc: "Smooth Face ID performance, Liquid Retina display, and all-day battery reliability at an unbeatable entry price.",
     points: ["Full 30-point Geetech hardware check", "All networks supported (SA & Global)", "Charging cable included"],
     price: "R3,600", label: "Black Friday Price", pay: "https://pay.yoco.com/r/jvBeAA" },
-  { cond: "pre-owned", model: "iPhone 11", spec: "64GB • Dual-Camera System", badge: "Value Pick", shape: "diag", c: ["#cdbbe8", "#9f86c9"],
+  { cond: "pre-owned", model: "iPhone 11", spec: "64GB • Dual-Camera System", badge: "Value Pick", img: "iphone%2011.jpg", shape: "diag", c: ["#cdbbe8", "#9f86c9"],
     desc: "Ultra-wide night mode photography, fast A13 Bionic chip, and strong battery life for everyday power users.",
     points: ["Full 30-point Geetech hardware check", "True Tone & Face ID verified", "Charging cable included"],
     price: "R4,800", label: "Black Friday Price", pay: "https://pay.yoco.com/r/OkMGjL" },
-  { cond: "pre-owned", model: "iPhone 13", spec: "128GB • Super Retina XDR", badge: "Top Deal", featured: true, shape: "diag", c: ["#5f84b0", "#365a85"],
+  { cond: "pre-owned", model: "iPhone 13", spec: "128GB • Super Retina XDR", badge: "Top Deal", featured: true, img: "iphone%2013.jpg", shape: "diag", c: ["#5f84b0", "#365a85"],
     desc: "Cinematic camera mode, A15 Bionic speed, and double the storage with 128GB standard.",
     points: ["Full 30-point Geetech hardware check", "128GB high-speed storage", "Charging cable included"],
-    price: "R7,000", label: "Black Friday Price", pay: "https://pay.yoco.com/r/qNKwjY" }
+    price: "R7,000", label: "Black Friday Price", pay: "https://pay.yoco.com/r/qNKwjY" },
   // ===== PRE-OWNED: iPhone XS to iPhone 14 Pro Max (paste into PRODUCTS) =====
   // No price = shows "Ask for price". To set one, add:  price: "R5,500", label: "Price", pay: "https://pay.yoco.com/r/XXXX",
   { cond: "pre-owned", model: "iPhone XS", spec: "5.8\" OLED • A12 Bionic", badge: "Budget", shape: "pill", c: ["#e6d3b3", "#bfa57a"],
@@ -519,6 +520,7 @@ const PRODUCTS = [
     desc: "Dynamic Island, always-on display and a 48MP main camera.", points: ["Full 30-point Geetech hardware check", "Face ID verified", "Charging cable included"] },
   { cond: "pre-owned", model: "iPhone 14 Pro Max", spec: "6.7\" ProMotion • A16 Bionic", badge: "Top Model", shape: "pro", c: ["#3c3d40", "#1e1f21"],
     desc: "The biggest 14-series screen with Dynamic Island and a 48MP camera.", points: ["Full 30-point Geetech hardware check", "Face ID verified", "Charging cable included"] },
+
   { cond: "brand-new", model: "iPhone 17 Pro Max", spec: "6.9\" display • A19 Pro", badge: "Flagship", featured: true, shape: "pro", c: ["#e8803a", "#b94a1c"],
     desc: "The biggest screen and longest battery life in the iPhone range, with a pro triple-camera system.", points: PRO },
   { cond: "brand-new", model: "iPhone 17 Pro", spec: "6.3\" display • A19 Pro", badge: "Pro", shape: "pro", c: ["#34487a", "#1d2a4c"],
