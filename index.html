@@ -4,14 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Geetech Electronic Store – Black Friday iPhone Sale & Repairs, Randfontein</title>
-<meta name="description" content="Geetech Black Friday Sale: iPhone XR R3600, iPhone 11 R4800, iPhone 13 R7000. Plus fast iPhone repairs in Homelake, Randfontein.">
+<meta name="description" content="Geetech Black Friday Sale: iPhone XR R3,600, iPhone 11 R4,800, iPhone 13 R7,000. Reserve via WhatsApp, pay via Instant EFT or on collection in Homelake, Randfontein.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Geetech Electronic Store – Black Friday iPhone Sale & Repairs, Randfontein">
-<meta property="og:description" content="Black Friday iPhone deals and fast iPhone repairs in Homelake, Randfontein.">
+<meta property="og:description" content="Black Friday iPhone deals and fast iPhone repairs in Homelake, Randfontein. Reserve via WhatsApp or pay on collection.">
 <meta property="og:locale" content="en_ZA">
 <meta name="theme-color" content="#1d4ed8">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MobilePhoneStore","name":"Geetech Electronic Store","telephone":"+27764533222","email":"geetechza@gmail.com","address":{"@type":"PostalAddress","streetAddress":"2 Constance Avenue","addressLocality":"Homelake, Randfontein","postalCode":"1759","addressRegion":"Gauteng","addressCountry":"ZA"},"openingHours":"Mo-Sa 08:30-18:00","sameAs":["https://www.tiktok.com/@geetechza","https://www.instagram.com/aspectkenny/","https://www.facebook.com/MastuluAppleTech/"]}
+{
+  "@context": "https://schema.org",
+  "@type": "MobilePhoneStore",
+  "name": "Geetech Electronic Store",
+  "telephone": "+27764533222",
+  "email": "geetechza@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2 Constance Avenue",
+    "addressLocality": "Homelake, Randfontein",
+    "postalCode": "1759",
+    "addressRegion": "Gauteng",
+    "addressCountry": "ZA"
+  },
+  "openingHours": "Mo-Sa 08:30-18:00",
+  "sameAs": [
+    "https://www.tiktok.com/@geetechza",
+    "https://www.instagram.com/aspectkenny/",
+    "https://www.facebook.com/MastuluAppleTech/"
+  ]
+}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +45,8 @@
   --blue-hover: #1e40af;
   --blue-soft: #eff6ff;
   --accent-red: #dc2626;
+  --green: #16a34a;
+  --green-hover: #15803d;
   --text: #0f172a;
   --muted: #475569;
   --line: #e2e8f0;
@@ -64,7 +86,7 @@ section.alt { background: var(--bg-alt); border-top: 1px solid var(--line); bord
 }
 
 h2 { font-size: clamp(1.75rem, 4vw, 2.35rem); line-height: 1.15; margin-bottom: 10px; font-weight: 800; color: var(--navy); letter-spacing: -0.02em; }
-.sub { color: var(--muted); max-width: 60ch; margin-bottom: 34px; font-size: 1.02rem; }
+.sub { color: var(--muted); max-width: 62ch; margin-bottom: 34px; font-size: 1.02rem; }
 
 /* Buttons */
 .btn {
@@ -72,9 +94,9 @@ h2 { font-size: clamp(1.75rem, 4vw, 2.35rem); line-height: 1.15; margin-bottom: 
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 13px 26px;
+  padding: 13px 24px;
   border-radius: 10px;
-  font: 600 0.96rem 'Inter', sans-serif;
+  font: 600 0.95rem 'Inter', sans-serif;
   text-decoration: none;
   border: 2px solid transparent;
   cursor: pointer;
@@ -83,6 +105,8 @@ h2 { font-size: clamp(1.75rem, 4vw, 2.35rem); line-height: 1.15; margin-bottom: 
 .btn:hover { transform: translateY(-2px); }
 .btn.primary { background: var(--blue); color: #ffffff; box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25); }
 .btn.primary:hover { background: var(--blue-hover); }
+.btn.whatsapp { background: var(--green); color: #ffffff; box-shadow: 0 4px 14px rgba(22, 163, 74, 0.25); }
+.btn.whatsapp:hover { background: var(--green-hover); }
 .btn.dark { background: var(--navy); color: #ffffff; }
 .btn.dark:hover { background: #1e293b; }
 .btn.outline { background: #ffffff; border-color: var(--line); color: var(--navy); }
@@ -106,31 +130,44 @@ header.nav {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
 .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
 .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 800; font-size: 1.3rem; line-height: 1.05; color: var(--navy); }
-.logo img { height: 44px; width: auto; border-radius: 8px; }
+.logo img { height: 44px; width: 44px; object-fit: cover; border-radius: 10px; }
+.logo-fallback {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.03em;
+}
 .logo small { display: block; color: var(--blue); font-weight: 600; font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase; }
 
-nav ul { display: flex; gap: 4px; list-style: none; padding: 0; align-items: center; }
+nav ul { display: flex; gap: 2px; list-style: none; padding: 0; align-items: center; }
 nav a, .dd > button {
   display: block;
-  padding: 9px 14px;
+  padding: 9px 12px;
   border-radius: 8px;
   text-decoration: none;
-  font: 500 0.92rem 'Inter', sans-serif;
+  font: 500 0.9rem 'Inter', sans-serif;
   color: var(--text);
   background: none;
   border: 0;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: background 0.15s, color 0.15s;
 }
 nav a:hover, .dd > button:hover { background: var(--bg-alt); color: var(--blue); }
-nav a.cta { background: var(--blue); color: #ffffff; font-weight: 600; margin-left: 6px; }
-nav a.cta:hover { background: var(--blue-hover); color: #ffffff; }
+nav a.cta { background: var(--green); color: #ffffff; font-weight: 600; margin-left: 6px; padding: 9px 15px; }
+nav a.cta:hover { background: var(--green-hover); color: #ffffff; }
 
 .dd { position: relative; }
 .dd > button::after { content: " ▾"; font-size: 0.8rem; }
@@ -161,7 +198,7 @@ nav a.cta:hover { background: var(--blue-hover); color: #ffffff; }
   font: 600 0.9rem 'Inter', sans-serif;
   cursor: pointer;
 }
-@media(max-width: 860px) {
+@media(max-width: 940px) {
   .burger { display: block; }
   nav ul {
     display: none;
@@ -188,7 +225,22 @@ nav a.cta:hover { background: var(--blue-hover); color: #ffffff; }
 .hero .wrap { display: grid; gap: 44px; grid-template-columns: 1.15fr 0.85fr; align-items: center; }
 .hero h1 { font-size: clamp(2.3rem, 5.5vw, 3.75rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.03em; color: var(--navy); }
 .hero h1 span { color: var(--blue); display: block; }
-.hero p { margin: 18px 0 28px; color: var(--muted); font-size: 1.08rem; max-width: 46ch; }
+.hero p { margin: 18px 0 24px; color: var(--muted); font-size: 1.08rem; max-width: 48ch; }
+.trust-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.trust-pills span {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  color: var(--navy);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 99px;
+}
 
 .hero-card {
   background: var(--navy);
@@ -237,8 +289,24 @@ nav a.cta:hover { background: var(--blue-hover); color: #ffffff; }
 .mini-item b { font-size: 1.15rem; color: #60a5fa; font-weight: 800; }
 @media(max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; } }
 
+/* Shop By Condition */
+.shop-grid { display: grid; gap: 20px; grid-template-columns: 1fr 1fr; }
+@media(max-width: 640px) { .shop-grid { grid-template-columns: 1fr; } }
+.shop-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.shop-card h3 { font-size: 1.4rem; font-weight: 800; color: var(--navy); }
+.shop-card p { color: var(--muted); font-size: 0.95rem; margin: 8px 0 20px; }
+
 /* Black Friday Deal Cards */
-.board { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.board { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
 .deal {
   background: #ffffff;
   border: 1px solid var(--line);
@@ -274,7 +342,9 @@ nav a.cta:hover { background: var(--blue-hover); color: #ffffff; }
 .price-box { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); }
 .price-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 600; }
 .deal .pr { font-size: 2.15rem; font-weight: 800; color: var(--navy); line-height: 1.1; }
-.deal .btn { margin-top: 16px; width: 100%; }
+.payment-note { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+.deal .btn { margin-top: 14px; width: 100%; }
+.deal .btn + .btn { margin-top: 10px; }
 
 /* Bundle Banner */
 .bundle {
@@ -303,19 +373,43 @@ nav a.cta:hover { background: var(--blue-hover); color: #ffffff; }
 .bundle li::before { content: "✓ "; color: var(--blue); font-weight: 800; }
 @media(max-width: 640px) { .bundle { grid-template-columns: 1fr; } }
 
-/* Cards (Why Geetech & Repairs) */
-.grid-cards { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+/* Cards (Why Geetech, Repairs, Delivery & Payment) */
+.grid-cards { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); }
 .card {
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 24px;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  display: flex;
+  flex-direction: column;
 }
 .card h3 { font-size: 1.08rem; margin-bottom: 6px; color: var(--navy); font-weight: 700; }
 .card p { color: var(--muted); font-size: 0.92rem; }
 .rep .card { border-top: 3px solid var(--blue); }
-.price { display: block; margin-top: 12px; color: var(--blue); font-weight: 800; font-size: 1.05rem; }
+.price { display: block; margin-top: 14px; color: var(--blue); font-weight: 800; font-size: 1.05rem; }
+.card-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+}
+.card-link:hover { color: var(--blue); text-decoration: underline; }
+.pay-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--blue-soft);
+  color: var(--blue);
+  padding: 3px 9px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
 
 /* Geetech Drive Callout */
 .game {
@@ -345,8 +439,9 @@ form {
   border-radius: 16px;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
+  align-self: start;
 }
-label { font-weight: 600; font-size: 0.88rem; color: var(--navy); }
+label { font-weight: 600; font-size: 0.88rem; color: var(--navy); display: block; }
 input, select, textarea {
   width: 100%;
   margin-top: 6px;
@@ -356,11 +451,23 @@ input, select, textarea {
   background: #ffffff;
   color: var(--text);
   font: inherit;
-  transition: border-color 0.15s;
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
-input:focus, select:focus, textarea:focus { border-color: var(--blue); outline: none; }
+input:focus, select:focus, textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
+  outline: none;
+}
 .two { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
 @media(max-width: 520px) { .two { grid-template-columns: 1fr; } }
+.form-hint {
+  font-size: 0.82rem;
+  color: var(--muted);
+  background: var(--bg-alt);
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
 
 dl { display: grid; gap: 18px; margin-top: 24px; }
 dt { color: var(--muted); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; }
@@ -370,19 +477,30 @@ dd a:hover { border-bottom-color: var(--blue); }
 
 .map { margin-top: 24px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); }
 .map iframe { display: block; width: 100%; height: 260px; border: 0; }
-.shop-grid { display: grid; gap: 20px; grid-template-columns: 1fr 1fr; }
-@media(max-width: 640px) { .shop-grid { grid-template-columns: 1fr; } }
-.shop-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 28px; box-shadow: var(--shadow); }
-.shop-card h3 { font-size: 1.4rem; font-weight: 800; color: var(--navy); }
-.shop-card p { color: var(--muted); font-size: 0.95rem; margin: 6px 0 18px; }
 .social { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
 .social a { padding: 8px 16px; border-radius: 99px; border: 1px solid var(--line); background: #fff; color: var(--navy); font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: all 0.15s; }
 .social a:hover { border-color: var(--blue); color: var(--blue); }
 footer .social { justify-content: center; margin-top: 14px; }
 footer .social a { background: transparent; border-color: rgba(255,255,255,0.2); color: #fff; }
 footer .social a:hover { border-color: #60a5fa; color: #60a5fa; }
-.wa-float { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 60; background: #16a34a; color: #fff; padding: 13px 20px; border-radius: 99px; font-weight: 700; font-size: 0.92rem; text-decoration: none; box-shadow: 0 8px 20px rgba(0,0,0,0.25); }
-.wa-float:hover { background: #15803d; }
+
+.wa-float {
+  position: fixed;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 60;
+  background: var(--green);
+  color: #fff;
+  padding: 13px 20px;
+  border-radius: 99px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: background 0.15s, transform 0.15s;
+}
+.wa-float:hover { background: var(--green-hover); transform: translateY(-2px); }
+
 footer {
   background: var(--navy);
   color: #94a3b8;
@@ -391,20 +509,153 @@ footer {
   font-size: 0.9rem;
 }
 footer strong { color: #ffffff; }
-@media(prefers-reduced-motion: reduce) { .btn, .deal { transition: none; } html { scroll-behavior: auto; } }
+
+/* FNB EFT Bank Box & Interactive Modal */
+.eft-banner {
+  margin-top: 26px;
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-left: 5px solid var(--blue);
+  border-radius: 16px;
+  padding: 24px 28px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+}
+@media(max-width: 780px) { .eft-banner { grid-template-columns: 1fr; } }
+.eft-banner h3 { font-size: 1.18rem; color: var(--navy); font-weight: 800; margin-bottom: 4px; }
+.eft-banner p { color: var(--muted); font-size: 0.9rem; }
+.bank-specs {
+  display: grid;
+  gap: 10px 18px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin-top: 14px;
+  background: var(--bg-alt);
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+.bank-specs div span { display: block; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 700; }
+.bank-specs div strong { font-size: 0.98rem; color: var(--navy); font-weight: 800; font-variant-numeric: tabular-nums; }
+.eft-banner-actions { display: flex; flex-direction: column; gap: 10px; }
+
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(10, 25, 47, 0.68);
+  backdrop-filter: blur(4px);
+  padding: 16px;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+.modal-backdrop.open { display: flex; }
+.modal-box {
+  background: #ffffff;
+  border-radius: 18px;
+  max-width: 480px;
+  width: 100%;
+  padding: 26px;
+  box-shadow: 0 25px 50px -12px rgba(10, 25, 47, 0.35);
+  border: 1px solid var(--line);
+  position: relative;
+  animation: modalPop 0.18s ease-out;
+}
+@keyframes modalPop {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  border-radius: 99px;
+  border: 1px solid var(--line);
+  background: var(--bg-alt);
+  color: var(--navy);
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-close:hover { border-color: var(--blue); color: var(--blue); }
+.modal-summary {
+  background: var(--navy);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 14px 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.modal-summary small { display: block; color: #94a3b8; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.modal-summary strong { font-size: 1.05rem; }
+.modal-summary .modal-amt { font-size: 1.45rem; font-weight: 800; color: #60a5fa; }
+.modal-rows {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.modal-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+.modal-row:last-child { border-bottom: 0; }
+.modal-row span { color: var(--muted); font-weight: 500; }
+.modal-row strong { color: var(--navy); font-weight: 800; font-variant-numeric: tabular-nums; }
+.copy-chip {
+  margin-left: 8px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #bfdbfe;
+  background: var(--blue-soft);
+  color: var(--blue);
+  font: 700 0.76rem 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.copy-chip:hover { background: var(--blue); color: #ffffff; }
+.copy-chip.copied { background: var(--green); border-color: var(--green); color: #ffffff; }
+.modal-ref-note {
+  background: var(--blue-soft);
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 11px 13px;
+  font-size: 0.84rem;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+
+@media(prefers-reduced-motion: reduce) { .btn, .deal, .wa-float, .modal-box { transition: none; animation: none; } html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
 
 <div class="promo-strip">
-  <strong>BLACK FRIDAY SALE LIVE:</strong> Limited Randfontein stock on iPhone XR, iPhone 11 & iPhone 13. <a href="#deals">View Specials →</a>
+  <strong>BLACK FRIDAY SALE LIVE:</strong> Limited Randfontein stock on iPhone XR, iPhone 11 &amp; iPhone 13. <a href="#deals">View Specials →</a>
 </div>
 
 <header class="nav"><div class="wrap">
   <a class="logo" href="#top">
-  <img src="logo.png" alt="Geetech logo">
-  <span>Geetech<small>Electronic Store</small></span>
-</a>
+    <img src="logo.png" alt="Geetech logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <span class="logo-fallback" aria-hidden="true">GT</span>
+    <span>Geetech<small>Electronic Store</small></span>
+  </a>
   <button class="burger" id="burger" aria-expanded="false" aria-controls="ml">Menu</button>
   <nav id="nav"><ul id="ml">
     <li><a href="#deals">Black Friday</a></li>
@@ -412,13 +663,13 @@ footer strong { color: #ffffff; }
     <li><a href="iphones.html#brand-new">Brand New</a></li>
     <li><a href="#repairs">Repairs</a></li>
     <li><a href="#why">Why Geetech</a></li>
-    <li><a href="#delivery">Delivery</a></li>
+    <li><a href="#delivery">Delivery &amp; Payment</a></li>
     <li><a href="#contact">Contact</a></li>
     <li class="dd" id="dd">
-      <button type="button" id="ddb" aria-expanded="false" aria-haspopup="true">Games & App</button>
+      <button type="button" id="ddb" aria-expanded="false" aria-haspopup="true">Games &amp; App</button>
       <div class="menu">
-        <a href="#game" class="play-link"><strong>Play Geetech Drive</strong><span>Free racing game in your browser.</span></a>
-        <a href="#game" class="apk-link"><strong>Download for Android</strong><span>Install the Geetech Drive APK.</span></a>
+        <a href="https://drive.geetech.online" class="play-link" target="_blank" rel="noopener"><strong>Play Geetech Drive</strong><span>Free racing game in your browser.</span></a>
+        <a href="https://github.com/MastuluAppleTech/geetechdrive/releases/download/v1.0/geetech-drive.apk" class="apk-link" download="geetech-drive.apk"><strong>Download for Android</strong><span>Install the Geetech Drive APK.</span></a>
       </div>
     </li>
     <li><a class="cta wa" href="https://wa.me/27764533222?text=Hi%20Geetech%2C%20I%27d%20like%20to%20enquire%20about%20an%20iPhone%20or%20repair" target="_blank" rel="noopener">WhatsApp Us</a></li>
@@ -431,7 +682,12 @@ footer strong { color: #ffffff; }
     <div>
       <span class="eyebrow">Randfontein's Trusted Apple Store</span>
       <h1>Black Friday iPhones. <span>Unbeatable Prices.</span></h1>
-      <p>Upgrade for less this Black Friday. Quality tested iPhones, sealed-box deals with free AirPods, and fast, honest hardware repairs in Homelake, Randfontein.</p>
+      <p>Upgrade for less this Black Friday. Quality-tested iPhones, sealed-box deals with free AirPods, and fast, honest hardware repairs in Homelake, Randfontein.</p>
+      <div class="trust-pills">
+        <span>✓ 30-Point Tested</span>
+        <span>✓ Instant EFT / PayShap</span>
+        <span>✓ Pay on Collection</span>
+      </div>
       <div class="actions">
         <a class="btn primary" href="#deals">Shop Black Friday Deals</a>
         <a class="btn outline" href="#book">Book a Repair</a>
@@ -441,10 +697,10 @@ footer strong { color: #ffffff; }
     <div class="hero-card">
       <span class="bf-pill">Black Friday Specials</span>
       <h3>Limited Stock Drops</h3>
-      <p class="card-sub">Available for collection in Randfontein or courier nationwide.</p>
+      <p class="card-sub">Reserve via WhatsApp for collection in Randfontein or courier nationwide.</p>
       <div class="mini-list">
         <div class="mini-item">
-          <div><strong>iPhone XR</strong><span>64GB Storage • Clean & Tested</span></div>
+          <div><strong>iPhone XR</strong><span>64GB Storage • Clean &amp; Tested</span></div>
           <b>R3,600</b>
         </div>
         <div class="mini-item">
@@ -464,14 +720,22 @@ footer strong { color: #ffffff; }
   <section id="shop" style="padding:44px 0"><div class="wrap">
     <div class="shop-grid">
       <div class="shop-card">
-        <h3>Pre-Owned iPhones</h3>
-        <p>Quality-tested iPhones at great prices, with Yoco payment links.</p>
-        <a class="btn primary" href="iphones.html#pre-owned">Shop Pre-Owned →</a>
+        <div>
+          <h3>Pre-Owned iPhones</h3>
+          <p>Quality-tested iPhones at great prices — reserve via WhatsApp, pay via Instant EFT or on collection.</p>
+        </div>
+        <div>
+          <a class="btn primary" href="iphones.html#pre-owned">Shop Pre-Owned →</a>
+        </div>
       </div>
       <div class="shop-card">
-        <h3>Brand New iPhones</h3>
-        <p>Factory sealed iPhones with free AirPods.</p>
-        <a class="btn dark" href="iphones.html#brand-new">Shop Brand New →</a>
+        <div>
+          <h3>Brand New iPhones</h3>
+          <p>Factory sealed iPhones with free AirPods included. Reserve your model for Homelake collection or nationwide delivery.</p>
+        </div>
+        <div>
+          <a class="btn dark" href="iphones.html#brand-new">Shop Brand New →</a>
+        </div>
       </div>
     </div>
   </div></section>
@@ -480,7 +744,7 @@ footer strong { color: #ffffff; }
   <section id="deals"><div class="wrap">
     <span class="eyebrow">Black Friday 2026</span>
     <h2>Geetech Black Friday iPhone Sale</h2>
-    <p class="sub">Massive savings on our most popular models. All devices are network-unlocked, thoroughly diagnostic-checked, and ready to go.</p>
+    <p class="sub">Massive savings on our most popular models. All devices are network-unlocked, thoroughly diagnostic-checked, and ready to reserve via WhatsApp.</p>
 
     <div class="board">
       <div class="deal">
@@ -490,14 +754,15 @@ footer strong { color: #ffffff; }
         <p>Smooth Face ID performance, Liquid Retina display, and all-day battery reliability at an unbeatable entry price.</p>
         <ul>
           <li>Full 30-point Geetech hardware check</li>
-          <li>All networks supported (SA & Global)</li>
+          <li>All networks supported (SA &amp; Global)</li>
           <li>Charging cable included</li>
         </ul>
         <div class="price-box">
           <div class="price-label">Black Friday Price</div>
           <div class="pr">R3,600</div>
-          <a class="btn dark wa-order" data-model="iPhone XR 64GB" data-price="R3,600" href="#contact">Order via WhatsApp</a>
-          <a class="btn outline" style="margin-top:10px" href="https://pay.yoco.com/r/jvBeAA" target="_blank" rel="noopener">Pay Now via Yoco</a>
+          <div class="payment-note">FNB Business EFT, PayShap, or Cash on Collection</div>
+          <a class="btn whatsapp wa-order" data-model="iPhone XR 64GB" data-price="R3,600" href="#contact">Reserve via WhatsApp</a>
+          <button type="button" class="btn outline eft-modal-btn" data-model="iPhone XR 64GB" data-price="R3,600">Pay via FNB EFT</button>
         </div>
       </div>
 
@@ -508,14 +773,15 @@ footer strong { color: #ffffff; }
         <p>Ultra-wide night mode photography, fast A13 Bionic chip, and strong battery life for everyday power users.</p>
         <ul>
           <li>Full 30-point Geetech hardware check</li>
-          <li>True Tone & Face ID verified</li>
+          <li>True Tone &amp; Face ID verified</li>
           <li>Charging cable included</li>
         </ul>
         <div class="price-box">
           <div class="price-label">Black Friday Price</div>
           <div class="pr">R4,800</div>
-          <a class="btn dark wa-order" data-model="iPhone 11 64GB" data-price="R4,800" href="#contact">Order via WhatsApp</a>
-          <a class="btn outline" style="margin-top:10px" href="https://pay.yoco.com/r/OkMGjL" target="_blank" rel="noopener">Pay Now via Yoco</a>
+          <div class="payment-note">FNB Business EFT, PayShap, or Cash on Collection</div>
+          <a class="btn whatsapp wa-order" data-model="iPhone 11 64GB" data-price="R4,800" href="#contact">Reserve via WhatsApp</a>
+          <button type="button" class="btn outline eft-modal-btn" data-model="iPhone 11 64GB" data-price="R4,800">Pay via FNB EFT</button>
         </div>
       </div>
 
@@ -532,8 +798,9 @@ footer strong { color: #ffffff; }
         <div class="price-box">
           <div class="price-label">Black Friday Price</div>
           <div class="pr">R7,000</div>
-          <a class="btn primary wa-order" data-model="iPhone 13 128GB" data-price="R7,000" href="#contact">Order via WhatsApp</a>
-          <a class="btn outline" style="margin-top:10px" href="https://pay.yoco.com/r/qNKwjY" target="_blank" rel="noopener">Pay Now via Yoco</a>
+          <div class="payment-note">FNB Business EFT, PayShap, or Cash on Collection</div>
+          <a class="btn primary wa-order" data-model="iPhone 13 128GB" data-price="R7,000" href="#contact">Reserve via WhatsApp</a>
+          <button type="button" class="btn outline eft-modal-btn" data-model="iPhone 13 128GB" data-price="R7,000">Pay via FNB EFT</button>
         </div>
       </div>
     </div>
@@ -559,23 +826,27 @@ footer strong { color: #ffffff; }
     <div class="grid-cards">
       <div class="card">
         <h3>Screen Replacements</h3>
-        <p>Crisp OLED & LCD replacements with True Tone transfer so your display looks and feels factory fresh.</p>
+        <p>Crisp OLED &amp; LCD replacements with True Tone transfer so your display looks and feels factory fresh.</p>
         <span class="price">From R550</span>
+        <a class="card-link prefill-btn" data-select="iPhone Screen / Battery Repair" href="#contact">Book screen repair →</a>
       </div>
       <div class="card">
         <h3>Battery Swaps</h3>
         <p>Restore 100% peak performance and stop unexpected shutdowns with high-capacity replacement cells.</p>
         <span class="price">From R450</span>
+        <a class="card-link prefill-btn" data-select="iPhone Screen / Battery Repair" href="#contact">Book battery swap →</a>
       </div>
       <div class="card">
         <h3>iPhone Makeover</h3>
         <p>Full housing color swaps and back-glass restorations to make your current iPhone look brand new.</p>
         <span class="price">Custom Quote</span>
+        <a class="card-link prefill-btn" data-select="iPhone Makeover (Housing Swap)" href="#contact">Request makeover quote →</a>
       </div>
       <div class="card">
-        <h3>Charging & Software</h3>
+        <h3>Charging &amp; Software</h3>
         <p>Charging port cleaning/replacement, speaker fixes, and iOS diagnostics up to iPhone 11 Pro Max.</p>
         <span class="price">From R250</span>
+        <a class="card-link prefill-btn" data-select="iPhone Screen / Battery Repair" href="#contact">Book diagnostic →</a>
       </div>
     </div>
   </div></section>
@@ -608,28 +879,47 @@ footer strong { color: #ffffff; }
   <!-- DELIVERY & PAYMENT -->
   <section id="delivery" class="alt"><div class="wrap">
     <span class="eyebrow">Delivery &amp; Payment</span>
-    <h2>Easy Ways to Pay and Receive</h2>
-    <p class="sub">Collect in Randfontein or have your order sent anywhere in South Africa. Message us on WhatsApp for delivery costs and timing to your area.</p>
+    <h2>Simple Ways to Pay and Receive</h2>
+    <p class="sub">Inspect and pay in person in Randfontein, or pay via Instant EFT to our official FNB Business Account for store pickup or nationwide courier delivery.</p>
     <div class="grid-cards">
       <div class="card">
+        <span class="pay-badge">Randfontein Pickup</span>
         <h3>Collect in Store</h3>
-        <p>2 Constance Avenue, Homelake, Randfontein. Inspect and test your phone before you leave.</p>
+        <p>2 Constance Avenue, Homelake, Randfontein. Inspect and test your phone in person before paying via cash or Instant EFT.</p>
       </div>
       <div class="card">
-        <h3>PostNet</h3>
-        <p>Have your order delivered to your nearest PostNet branch.</p>
+        <span class="pay-badge">Official FNB Business</span>
+        <h3>Instant EFT &amp; PayShap</h3>
+        <p>Pay directly into our verified FNB Business Account (<strong>63139188593</strong>). Confirm stock on WhatsApp first for instant allocation.</p>
       </div>
       <div class="card">
-        <h3>Paxi (PEP)</h3>
-        <p>Affordable collection from a PEP store near you.</p>
+        <span class="pay-badge">Door-to-Door</span>
+        <h3>Nationwide Courier</h3>
+        <p>Fast, tracked door-to-door delivery anywhere in South Africa via The Courier Guy once EFT payment reflects.</p>
       </div>
       <div class="card">
-        <h3>The Courier Guy</h3>
-        <p>Door-to-door courier delivery for your order.</p>
+        <span class="pay-badge">Counter Pickup</span>
+        <h3>PostNet &amp; Paxi (PEP)</h3>
+        <p>Affordable counter-to-counter parcel collection at your nearest PostNet branch or PEP store nationwide.</p>
       </div>
-      <div class="card">
-        <h3>Secure Online Payment</h3>
-        <p>Pay safely by card through Yoco using the "Pay Now" button on each iPhone deal.</p>
+    </div>
+
+    <div class="eft-banner" aria-label="Official FNB Business Account Details">
+      <div>
+        <span class="pay-badge" style="margin-bottom:6px">Verified Business Banking</span>
+        <h3>Official Geetech FNB Business Account</h3>
+        <p>Verify these exact details before making an Instant EFT. Use <strong>Your Name + iPhone Model</strong> as your payment reference.</p>
+        <div class="bank-specs">
+          <div><span>Bank</span><strong>FNB (First National Bank)</strong></div>
+          <div><span>Account Name</span><strong>Geetech Electronic Store</strong></div>
+          <div><span>Account Type</span><strong>Business Account</strong></div>
+          <div><span>Account Number</span><strong>63139188593</strong></div>
+          <div><span>Branch Code</span><strong>250655</strong></div>
+        </div>
+      </div>
+      <div class="eft-banner-actions">
+        <button type="button" class="btn primary copy-acc-btn" data-copy="63139188593">Copy Account Number (63139188593)</button>
+        <a class="btn whatsapp" href="https://wa.me/27764533222?text=Hi%20Geetech%2C%20I%27d%20like%20to%20confirm%20stock%20and%20send%20my%20FNB%20EFT%20Proof%20of%20Payment." target="_blank" rel="noopener">Send Proof of Payment on WhatsApp</a>
       </div>
     </div>
   </div></section>
@@ -643,8 +933,8 @@ footer strong { color: #ffffff; }
         <p>Take a break and test your reflexes on Mzansi highways in our custom 3D endless racer—right in your browser or on Android.</p>
       </div>
       <div class="actions">
-        <a class="btn primary play-link" href="#">Play in Browser</a>
-        <a class="btn outline apk-link" href="#">Download Android APK</a>
+        <a class="btn primary play-link" href="https://drive.geetech.online" target="_blank" rel="noopener">Play in Browser</a>
+        <a class="btn outline apk-link" href="https://github.com/MastuluAppleTech/geetechdrive/releases/download/v1.0/geetech-drive.apk" download="geetech-drive.apk">Download Android APK</a>
       </div>
     </div>
   </div></section>
@@ -655,30 +945,34 @@ footer strong { color: #ffffff; }
       <div>
         <span class="eyebrow">Get In Touch</span>
         <h2>Lock In Your Black Friday Deal or Book a Repair</h2>
-        <p class="sub" style="margin-bottom:16px">Send a quick request below or message us directly on WhatsApp to reserve your iPhone before stock runs out.</p>
+        <p class="sub" style="margin-bottom:16px">Send a quick reservation below or message us directly on WhatsApp to confirm stock, banking details, or delivery quotes.</p>
         <dl>
-  <div>
-    <dt>Location</dt>
-    <dd>2 Constance Avenue, Homelake, Randfontein, 1759</dd>
-    <dd style="margin-top:6px"><a href="https://www.google.com/maps/search/?api=1&query=2+Constance+Avenue%2C+Homelake%2C+Randfontein%2C+1759" target="_blank" rel="noopener">Get directions →</a></dd>
-  </div>
-  <div>
-    <dt>Trading Hours</dt>
-    <dd>Mon – Sat: 08:30 – 18:00</dd>
-  </div>
-  <div>
-    <dt>Direct WhatsApp</dt>
-    <dd><a class="wa" href="https://wa.me/27764533222" target="_blank" rel="noopener">076 453 3222</a></dd>
-  </div>
-  <div>
-    <dt>Email</dt>
-    <dd><a href="mailto:geetechza@gmail.com">geetechza@gmail.com</a></dd>
-  </div>
-  <div>
-    <dt>Follow Us</dt>
-    <dd class="social"><a href="https://www.tiktok.com/@geetechza" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/aspectkenny/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/MastuluAppleTech/" target="_blank" rel="noopener">Facebook</a></dd>
-  </div>
-</dl>
+          <div>
+            <dt>Location</dt>
+            <dd>2 Constance Avenue, Homelake, Randfontein, 1759</dd>
+            <dd style="margin-top:6px"><a href="https://www.google.com/maps/search/?api=1&query=2+Constance+Avenue%2C+Homelake%2C+Randfontein%2C+1759" target="_blank" rel="noopener">Get directions →</a></dd>
+          </div>
+          <div>
+            <dt>Trading Hours</dt>
+            <dd>Mon – Sat: 08:30 – 18:00</dd>
+          </div>
+          <div>
+            <dt>Direct WhatsApp</dt>
+            <dd><a class="wa" href="https://wa.me/27764533222" target="_blank" rel="noopener">076 453 3222</a></dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:geetechza@gmail.com">geetechza@gmail.com</a></dd>
+          </div>
+          <div>
+            <dt>Follow Us</dt>
+            <dd class="social">
+              <a href="https://www.tiktok.com/@geetechza" target="_blank" rel="noopener">TikTok</a>
+              <a href="https://www.instagram.com/aspectkenny/" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://www.facebook.com/MastuluAppleTech/" target="_blank" rel="noopener">Facebook</a>
+            </dd>
+          </div>
+        </dl>
         <div class="map"><iframe title="Map to Geetech Electronic Store, Homelake, Randfontein" src="https://www.google.com/maps?q=2+Constance+Avenue%2C+Homelake%2C+Randfontein%2C+1759&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
       </div>
 
@@ -700,32 +994,89 @@ footer strong { color: #ffffff; }
             <option value="Brand New Sealed iPhone + Free AirPods">Brand New Sealed iPhone + Free AirPods</option>
             <option value="iPhone Screen / Battery Repair">iPhone Screen / Battery Repair</option>
             <option value="iPhone Makeover (Housing Swap)">iPhone Makeover (Housing Swap)</option>
+            <option value="Trade-In Valuation">Trade-In Valuation</option>
           </select>
         </label>
-        <label>iPhone Model (for repairs)
-          <input type="text" id="cmodel" placeholder="e.g. iPhone 11 – cracked screen">
+        <label>Preferred Payment &amp; Delivery
+          <select id="cpayment">
+            <option value="Pay on Collection – Homelake, Randfontein">Pay on Collection – Homelake, Randfontein</option>
+            <option value="Instant EFT / PayShap – Store Collection">Instant EFT / PayShap – Store Collection</option>
+            <option value="Instant EFT / PayShap – Courier / PostNet / Paxi">Instant EFT / PayShap – Courier / PostNet / Paxi</option>
+          </select>
+        </label>
+        <label>Device / Model Details (Optional)
+          <input type="text" id="cmodel" placeholder="e.g. iPhone 11 cracked screen, or trade-in model">
         </label>
         <label>Notes (Optional)
-          <textarea id="cnotes" rows="3" placeholder="Preferred color, collection time, or fault details..."></textarea>
+          <textarea id="cnotes" rows="3" placeholder="Preferred color, city/suburb for courier quote, or collection time..."></textarea>
         </label>
-        <button type="submit" class="btn primary">Send Enquiry via WhatsApp</button>
+        <div class="form-hint">Official FNB Business Account: <strong>63139188593</strong> (Branch Code: <strong>250655</strong>). Please confirm stock availability via WhatsApp before sending an EFT.</div>
+        <button type="submit" class="btn whatsapp">Send Order / Enquiry via WhatsApp</button>
       </form>
     </div>
   </div></section>
 </main>
 
+<!-- FNB EFT PAYMENT MODAL -->
+<div class="modal-backdrop" id="eftModal" role="dialog" aria-modal="true" aria-labelledby="eftModalTitle">
+  <div class="modal-box">
+    <button type="button" class="modal-close" id="closeEftModal" aria-label="Close payment window">&times;</button>
+    <span class="eyebrow" style="margin-bottom:6px">Instant EFT / Bank Transfer</span>
+    <h3 id="eftModalTitle" style="font-size:1.35rem;color:var(--navy);font-weight:800">Pay via FNB Business EFT</h3>
+
+    <div class="modal-summary">
+      <div>
+        <small>Selected Device</small>
+        <strong id="modalDeviceName">iPhone 13 128GB</strong>
+      </div>
+      <div class="modal-amt" id="modalDevicePrice">R7,000</div>
+    </div>
+
+    <div class="modal-rows">
+      <div class="modal-row"><span>Bank</span><strong>FNB (First National Bank)</strong></div>
+      <div class="modal-row"><span>Account Name</span><strong>Geetech Electronic Store</strong></div>
+      <div class="modal-row"><span>Account Type</span><strong>Business Account</strong></div>
+      <div class="modal-row">
+        <span>Account Number</span>
+        <div>
+          <strong>63139188593</strong>
+          <button type="button" class="copy-chip copy-acc-btn" data-copy="63139188593">Copy</button>
+        </div>
+      </div>
+      <div class="modal-row">
+        <span>Branch Code</span>
+        <div>
+          <strong>250655</strong>
+          <button type="button" class="copy-chip copy-acc-btn" data-copy="250655">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-ref-note">
+      <strong>Payment Reference:</strong> Use <strong>Your Name + <span id="modalRefModel">iPhone 13</span></strong>. Please select <em>Instant / Immediate Payment</em> so we can dispatch or prepare your device right away.
+    </div>
+
+    <a id="modalPopWhatsapp" class="btn whatsapp" style="width:100%" href="https://wa.me/27764533222" target="_blank" rel="noopener">Send Proof of Payment on WhatsApp</a>
+  </div>
+</div>
+
 <footer>
   <div class="wrap">
     <strong>Geetech Electronic Store</strong> • 2 Constance Avenue, Homelake, Randfontein, 1759 • © 2026 All Rights Reserved.
-    <div class="social"><a href="https://www.tiktok.com/@geetechza" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/aspectkenny/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/MastuluAppleTech/" target="_blank" rel="noopener">Facebook</a></div>
+    <div class="social">
+      <a href="https://www.tiktok.com/@geetechza" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.instagram.com/aspectkenny/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/MastuluAppleTech/" target="_blank" rel="noopener">Facebook</a>
+    </div>
   </div>
 </footer>
 
 <a class="wa-float" href="https://wa.me/27764533222?text=Hi%20Geetech%2C%20I%27d%20like%20to%20enquire%20about%20an%20iPhone%20or%20repair" target="_blank" rel="noopener" aria-label="Chat with Geetech on WhatsApp">💬 WhatsApp Us</a>
 
 <script>
-  const GAME_URL = "https://drive.geetech.online"; 
-const APK_URL = "https://github.com/MastuluAppleTech/geetechdrive/releases/download/v1.0/geetech-drive.apk";  
+const GAME_URL = "https://drive.geetech.online";
+const APK_URL = "https://github.com/MastuluAppleTech/geetechdrive/releases/download/v1.0/geetech-drive.apk";
+const WA_NUMBER = "27764533222";
 
 document.querySelectorAll('.play-link').forEach((link) => {
   link.setAttribute('href', GAME_URL);
@@ -737,8 +1088,6 @@ document.querySelectorAll('.apk-link').forEach((link) => {
   link.setAttribute('href', APK_URL);
   link.setAttribute('download', 'geetech-drive.apk');
 });
-// Replace with your real WhatsApp number in international format (e.g. 27712345678)
-const WA_NUMBER = "27764533222";
 
 const burger = document.getElementById('burger');
 const nav = document.getElementById('nav');
@@ -761,24 +1110,111 @@ document.addEventListener('click', () => {
   ddb.setAttribute('aria-expanded', 'false');
 });
 
-// Order buttons open WhatsApp directly with the deal pre-filled
-document.querySelectorAll('.wa-order').forEach(btn => {
-  const msg = `Hi Geetech! I'd like to order the Black Friday ${btn.dataset.model} (${btn.dataset.price}). Is it still available?`;
+// Reserve buttons open WhatsApp directly with model, price, and collection/delivery prompt
+document.querySelectorAll('.wa-order').forEach((btn) => {
+  const msg = `Hi Geetech! I'd like to reserve the Black Friday ${btn.dataset.model} (${btn.dataset.price}). Is stock still available for collection or courier?`;
   btn.setAttribute('href', `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`);
   btn.setAttribute('target', '_blank');
   btn.setAttribute('rel', 'noopener');
 });
 
+// Pre-select deal or repair option when clicking "Enquire / EFT Details" or repair quick links
+document.querySelectorAll('.prefill-btn').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const serviceSelect = document.getElementById('cservice');
+    const targetOption = btn.dataset.select;
+    if (serviceSelect && targetOption) {
+      serviceSelect.value = targetOption;
+    }
+    setTimeout(() => {
+      const nameInput = document.getElementById('cname');
+      if (nameInput) nameInput.focus({ preventScroll: true });
+    }, 450);
+  });
+});
+
 // Close mobile menu after tapping a link; close dropdown on Escape
-document.querySelectorAll('#ml a').forEach(a => a.addEventListener('click', () => {
+document.querySelectorAll('#ml a').forEach((a) => a.addEventListener('click', () => {
   nav.classList.remove('open');
   burger.setAttribute('aria-expanded', 'false');
 }));
+
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     dd.classList.remove('open');
     ddb.setAttribute('aria-expanded', 'false');
+    closeModal();
   }
+});
+
+// Clipboard helper with fallback for all environments
+function copyTextValue(text, btn) {
+  const originalText = btn.textContent;
+  const markCopied = () => {
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.classList.remove('copied');
+    }, 2000);
+  };
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(markCopied).catch(() => fallbackCopy(text, markCopied));
+  } else {
+    fallbackCopy(text, markCopied);
+  }
+}
+
+function fallbackCopy(text, callback) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try {
+    document.execCommand('copy');
+    callback();
+  } catch (err) {
+    // Ignore copy failure silently
+  }
+  document.body.removeChild(ta);
+}
+
+document.querySelectorAll('.copy-acc-btn').forEach((btn) => {
+  btn.addEventListener('click', () => copyTextValue(btn.dataset.copy, btn));
+});
+
+// Interactive FNB EFT Payment Modal
+const eftModal = document.getElementById('eftModal');
+const closeEftModalBtn = document.getElementById('closeEftModal');
+const modalDeviceName = document.getElementById('modalDeviceName');
+const modalDevicePrice = document.getElementById('modalDevicePrice');
+const modalRefModel = document.getElementById('modalRefModel');
+const modalPopWhatsapp = document.getElementById('modalPopWhatsapp');
+
+function openEftModal(model, price) {
+  modalDeviceName.textContent = model;
+  modalDevicePrice.textContent = price;
+  modalRefModel.textContent = model.replace(/\s+\d+GB$/i, '');
+  const popMsg = `Hi Geetech! I'm paying via FNB Business EFT (Acc: 63139188593) for the Black Friday *${model}* (*${price}*). Here is my Proof of Payment:`;
+  modalPopWhatsapp.setAttribute('href', `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(popMsg)}`);
+  eftModal.classList.add('open');
+  closeEftModalBtn.focus();
+}
+
+function closeModal() {
+  eftModal.classList.remove('open');
+}
+
+document.querySelectorAll('.eft-modal-btn').forEach((btn) => {
+  btn.addEventListener('click', () => openEftModal(btn.dataset.model, btn.dataset.price));
+});
+
+closeEftModalBtn.addEventListener('click', closeModal);
+eftModal.addEventListener('click', (e) => {
+  if (e.target === eftModal) closeModal();
 });
 
 function sendWhatsApp(e) {
@@ -786,11 +1222,12 @@ function sendWhatsApp(e) {
   const name = document.getElementById('cname').value.trim();
   const phone = document.getElementById('cphone').value.trim();
   const service = document.getElementById('cservice').value;
-  const notes = document.getElementById('cnotes').value.trim();
+  const payment = document.getElementById('cpayment').value;
   const model = document.getElementById('cmodel').value.trim();
+  const notes = document.getElementById('cnotes').value.trim();
 
-  let msg = `Hi Geetech! My name is ${name} (${phone}).\nI'm interested in: *${service}*`;
-  if (model) msg += `\niPhone model: ${model}`;
+  let msg = `Hi Geetech! My name is ${name} (${phone}).\nI'm interested in: *${service}*\nPreferred Payment & Delivery: *${payment}*`;
+  if (model) msg += `\nDevice details: ${model}`;
   if (notes) msg += `\nNotes: ${notes}`;
 
   window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
