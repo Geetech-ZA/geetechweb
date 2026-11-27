@@ -1061,17 +1061,17 @@
   <!-- SINGLE CLEAN END-OF-BODY SCRIPT BLOCK -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      var WA_NUMBER = "27764533222";
-
-      function waLink(text) {
-        return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text);
-      }
-
-      // 1. Clean Brand Logo Fallback Handler
+      // 1. Clean Brand Logo Fallback Handler (logo.png -> logo.jpg -> GT monogram)
       var brandLogo = document.getElementById("brandLogo");
       var brandFallback = document.getElementById("brandFallback");
+      var triedLogoJpg = false;
 
-      function showLogoFallback() {
+      function handleLogoError() {
+        if (brandLogo && !triedLogoJpg) {
+          triedLogoJpg = true;
+          brandLogo.src = "logo.jpg";
+          return;
+        }
         if (brandLogo) brandLogo.classList.add("hidden");
         if (brandFallback) {
           brandFallback.classList.remove("hidden");
@@ -1080,15 +1080,20 @@
       }
 
       if (brandLogo) {
-        brandLogo.addEventListener("error", showLogoFallback);
+        brandLogo.addEventListener("error", handleLogoError);
         if (brandLogo.complete && brandLogo.naturalWidth === 0) {
-          showLogoFallback();
+          handleLogoError();
         }
       }
 
-      // 2. Complete 27-Model iPhone Inventory (Valid Escaped Quotes, Zero HTML Entities)
+      // 2. Complete 27-Model iPhone Inventory with Exact Repo Filenames
       var SEALED_POINTS = ["Factory sealed box", "Free AirPods included", "Collect in Randfontein or courier"];
       var PREOWNED_POINTS = ["Full 30-point Geetech ZA hardware check", "Face ID verified", "Charging cable included"];
+      var WA_NUMBER = "27764533222";
+
+      function waLink(text) {
+        return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text);
+      }
 
       var PRODUCTS = [
         // Pre-Owned Models (18)
@@ -1296,6 +1301,7 @@
           model: "iPhone 17 Pro Max",
           spec: "6.9\" display • A19 Pro",
           badge: "Flagship",
+          img: "iPhone%2017PM.jpg",
           shape: "pro",
           c: ["#e8803a", "#b94a1c"],
           desc: "The biggest screen and longest battery life in the iPhone range, with a pro triple-camera system.",
@@ -1316,6 +1322,7 @@
           model: "iPhone Air",
           spec: "6.5\" ProMotion • A19 Pro",
           badge: "Ultra Thin",
+          img: "iPhone%20air.jpg",
           shape: "bar1",
           c: ["#d6e6f3", "#a8c2d8"],
           desc: "The thinnest iPhone ever, light in the hand with all-day battery life.",
@@ -1326,6 +1333,7 @@
           model: "iPhone 17",
           spec: "6.3\" ProMotion • A19",
           badge: "Popular",
+          img: "iPhone%2017.jpg",
           shape: "bar2",
           c: ["#bcaadb", "#8c78b6"],
           desc: "Bright ProMotion display, fast A19 chip and the Center Stage front camera.",
@@ -1336,6 +1344,7 @@
           model: "iPhone 17e",
           spec: "6.1\" display • A19",
           badge: "Best Value",
+          img: "iPhone%2017e.jpg",
           shape: "single",
           c: ["#f4cdd5", "#e2a3b3"],
           desc: "The most affordable iPhone 17 family model, starting at 256GB of storage.",
@@ -1346,6 +1355,7 @@
           model: "iPhone 16 Plus",
           spec: "6.7\" display • A18",
           badge: "Big Screen",
+          img: "iPhone%2016%20Plus.jpg",
           shape: "pill",
           c: ["#7088ea", "#4a5fc6"],
           desc: "A large display and big battery for streaming, gaming and photos.",
@@ -1356,6 +1366,7 @@
           model: "iPhone 16",
           spec: "6.1\" display • A18",
           badge: "Everyday",
+          img: "iPhone%2016.jpg",
           shape: "pill",
           c: ["#86cbc3", "#53a59c"],
           desc: "Capable A18 performance, Camera Control and an Action button.",
@@ -1366,6 +1377,7 @@
           model: "iPhone 16e",
           spec: "6.1\" display • A18",
           badge: "Entry",
+          img: "iPhone%2016e.jpg",
           shape: "single",
           c: ["#3d3d40", "#1c1c1e"],
           desc: "A18 power and Face ID at a lower price in a clean, simple design.",
@@ -1376,6 +1388,7 @@
           model: "iPhone 15",
           spec: "6.1\" display • A16 Bionic",
           badge: "Budget Pick",
+          img: "iPhone%2015.jpg",
           shape: "diag",
           c: ["#f3d8d8", "#d9abab"],
           desc: "Dynamic Island, USB-C and a 48MP main camera at a friendlier price.",
@@ -1438,12 +1451,16 @@
           : "Hi Geetech ZA! I'm interested in the " + condLabel.toLowerCase() + " " + p.model + ". What storage sizes and colours do you have, and what is the price?";
 
         var svgFallback = phoneSVG(p.shape, p.c);
+        var stageBg = p.img
+          ? "bg-[radial-gradient(circle_at_50%_40%,_#ffffff_0%,_#e2e8f0_100%)]"
+          : "bg-[radial-gradient(circle_at_center,_rgba(37,99,235,0.2),_#141418_75%)]";
+
         var visualHTML = p.img
-          ? '<div class="relative flex items-center justify-center h-44">' +
-              '<img src="' + p.img + '" alt="' + p.model + '" loading="lazy" class="product-photo h-44 w-auto object-contain rounded-xl drop-shadow-2xl" />' +
+          ? '<div class="relative flex items-center justify-center h-48">' +
+              '<img src="' + p.img + '" alt="' + p.model + '" loading="lazy" class="product-photo h-44 w-auto max-w-[85%] object-contain mix-blend-multiply drop-shadow-md" />' +
               '<div class="product-svg-fallback hidden">' + svgFallback + '</div>' +
             '</div>'
-          : svgFallback;
+          : '<div class="relative flex items-center justify-center h-48">' + svgFallback + '</div>';
 
         var pointsHTML = p.points.map(function (pt) {
           return '<li class="flex items-center gap-2"><span class="text-blue-400 font-bold">✓</span><span>' + pt + '</span></li>';
@@ -1460,11 +1477,11 @@
 
         return '<article class="bg-[#0c0c0e] ' + cardBorder + ' rounded-3xl overflow-hidden flex flex-col justify-between transition">' +
           '<div>' +
-            '<div class="relative bg-[radial-gradient(circle_at_center,_rgba(37,99,235,0.2),_#141418_75%)] border-b border-white/10 py-6 px-4">' +
-              '<span class="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-black/75 border border-white/10 text-[11px] font-semibold text-gray-200 px-2.5 py-1 rounded-full">' +
+            '<div class="relative ' + stageBg + ' border-b border-white/10 pt-11 pb-5 px-4">' +
+              '<span class="absolute top-3.5 left-3.5 inline-flex items-center gap-1.5 bg-black/85 backdrop-blur-md border border-white/15 text-[11px] font-semibold text-gray-100 px-2.5 py-1 rounded-full">' +
                 '<span class="' + dotClass + '"></span>' + condLabel +
               '</span>' +
-              '<span class="absolute top-4 right-4 font-promo uppercase text-[11px] bg-white/10 text-white px-2.5 py-1 rounded font-bold">' + p.badge + '</span>' +
+              '<span class="absolute top-3.5 right-3.5 font-promo uppercase text-[11px] bg-black/85 backdrop-blur-md border border-white/15 text-white px-2.5 py-1 rounded font-bold">' + p.badge + '</span>' +
               visualHTML +
             '</div>' +
             '<div class="p-6">' +
